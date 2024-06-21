@@ -15,11 +15,11 @@ def click_and_paste(x, y, text, retries=3, delay=0.7):
         pyautogui.click(x, y)
         pyperclip.copy(text)
         pyautogui.hotkey('ctrl', 'v')
-        time.sleep(delay)  # Aggiunto un ritardo
+        time.sleep(delay)  
         pyautogui.hotkey('ctrl', 'a')
-        time.sleep(delay)  # Aggiunto un ritardo
+        time.sleep(delay) 
         pyautogui.hotkey('ctrl', 'c')
-        time.sleep(delay)  # Aggiunto un ritardo
+        time.sleep(delay) 
         pasted_text = pyperclip.paste()
         if pasted_text == text:
             return True
@@ -113,9 +113,9 @@ def welcome_window():
               " from any responsibility related to improper use, malfunctions, or any"
               " other problem arising from its use."),
         font=("Verdana", 8),
-        wraplength=400,  # Set a maximum width for the text
-        justify="left",  # Left text alignment
-        fg="red"  # Text color
+        wraplength=400,  
+        justify="left",  
+        fg="red"  
     )
     disclaimer_label.pack(pady=20)
 
@@ -175,7 +175,6 @@ def launch_data_entry_window():
     btn_exit = tk.Button(data_entry_window, text="Exit", command=data_entry_window.quit, font=("Verdana", 10))
     btn_exit.pack(pady=10)
 
-    # Adding the ESC label
     esc_label = tk.Label(data_entry_window, text="Press ESC at any time to stop the program.", font=("Verdana", 8), fg="red")
     esc_label.pack(pady=5)
 
